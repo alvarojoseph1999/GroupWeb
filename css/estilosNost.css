@@ -1,0 +1,246 @@
+
+:root{
+    --oscuro:#07070A;
+    --azulOscuro:#0A1128;
+    --azulClaro:#006FE6;
+    --blanco:#FEFCFB;
+    --titulos:'Baloo 2', cursive;
+    --parrafos:'Montserrat', sans-serif;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* scroll-behavior: smooth; */
+}
+body{
+    font-size: 1.6rem;
+}
+
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+/*Estilos globales*/
+h1, h2, h3{
+    font-family: var(--titulos);
+}
+
+p, a{
+    font-family: var(--parrafos);
+}
+
+h4{
+    font-family: var(--parrafos);
+}
+
+.ocultar{
+    display: none;
+}
+
+.contenedor{
+    margin: 0 auto;
+    max-width: 120rem;
+    width: 95%;
+}
+
+/*encabezado*/
+.encabezado{
+    background-image: url('../img/Nosotros01.jpg');
+    background-repeat: no-repeat;
+    height: 25vh;
+    min-height:25rem;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    z-index: 1;
+}
+
+@media(min-width: 768px) {
+    .encabezado{
+        background-attachment: fixed;
+    }
+}
+.encabezado::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgba(0,0,0,.5);
+    z-index: -1;
+}
+.logo h2{
+    font-size: 3rem;
+}
+
+.logo h2 span{
+    color: var(--azulClaro);
+}
+.contenido-navegacion{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--blanco);
+    box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.45);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+.texto-encabezado h1{
+    font-size: 8rem;
+    text-align: center;
+    color: var(--blanco);
+    padding-top: 10rem;
+}
+@media(min-width: 768px) {
+    .texto-encabezado h1{
+        font-size: 8rem;
+        text-align: center;
+        padding-top: 10rem;
+    }
+
+}
+
+.navegacion{
+    background-color: var(--blanco);
+    position: absolute;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    animation: desplazamiento .5s ease-in-out;
+}
+
+@media(min-width: 768px) {
+    .ocultar{
+        display: inline;
+    }
+}
+
+.navegacion a{
+    display: block;
+    font-size: 2rem;
+    padding: 1.1rem;
+    color: var(--oscuro);
+    text-decoration: none;
+    transition: background-color .3s ease-in-out;
+    font-weight: bold;
+}
+
+.navegacion h4{
+    display: block;
+    font-size: 2rem;
+    padding: 1.1rem;
+    color: var(--oscuro);
+    text-decoration: none;
+    transition: background-color .3s ease-in-out;
+
+}
+
+.navegacion a:hover{
+    background-color: var(--azulClaro);
+    color: var(--blanco);
+}
+
+.navegacion h4:hover{
+    background-color: var(--azulClaro);
+    color: var(--blanco);
+}
+
+@media(min-width: 768px) {
+    .navegacion a{
+        display: inline;
+    }
+    
+}
+@media(min-width: 768px) {
+    .navegacion h4{
+        display: inline;
+    }
+    
+}
+
+@media(min-width: 768px) {
+    .navegacion{
+        position: relative;
+        top: unset;
+        width: auto;
+        background-color: unset;
+        animation: unset;
+    }
+}
+.hamburguesa span{
+    width: 5rem;
+    height: 1rem;
+    border: 3px solid white;
+    background-color: var(--oscuro);
+    display: block;
+}
+
+@media(min-width: 768px) {
+    .hamburguesa{
+        display: none;
+    }
+}
+
+/*ventajas*/
+@media(min-width: 768px) {
+    .contenido-ventajas{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 1rem;
+    }
+}
+.ventajas{
+    padding: 5rem;
+    background-color:#ffffff;
+}
+
+.ventaja{
+    color: var(--azulOscuro);
+    text-align: center;
+}
+
+.ventaja i{
+    font-size: 4rem;
+}
+
+.ventaja h3{
+    font-size: 2.5rem;
+}
+
+.ventaja p{
+    font-size: 2rem;
+}
+
+/*valores*/
+@media(min-width: 768px) {
+    .contenido-valores{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+    }
+}
+.valores{
+    padding: 5rem;
+   background-color:#838691;
+}
+
+.valores{
+    color: var(--blanco);
+    text-align: center;
+}
+
+.valores i{
+    font-size: 4rem;
+}
+
+.valores h3{
+    font-size: 2.5rem;
+}
+
+.valores p{
+    font-size: 2rem;
+}
